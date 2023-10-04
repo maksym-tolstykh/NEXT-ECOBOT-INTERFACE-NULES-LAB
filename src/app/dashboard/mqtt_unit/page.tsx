@@ -30,19 +30,25 @@ async function Favorite() {
           <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
             <tr>
               <th scope="col" className="px-6 py-3">
-                ID Станції
+                ID
               </th>
               <th scope="col" className="px-6 py-3">
-                Повідомлення
+                Одиниця вимірювання
               </th>
               <th scope="col" className="px-6 py-3">
-                Статус
+                Назва
+              </th>
+              <th scope="col" className="px-6 py-3">
+                Номер черги
               </th>
             </tr>
           </thead>
           <tbody>
             {mu?.rows?.map((item: any, index: number) => (
-              <tr key={item} className="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+              <tr
+                key={item}
+                className="bg-white border-b dark:bg-gray-800 dark:border-gray-700"
+              >
                 <th
                   scope="row"
                   className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
@@ -51,7 +57,7 @@ async function Favorite() {
                 </th>
                 <td className="px-6 py-4">{item.title}</td>
                 <td className="px-6 py-4">{item.message}</td>
-                <td className="px-6 py-4">{item.queue_number}</td>
+                <td className="px-6 py-4">{item.Order}</td>
               </tr>
             ))}
           </tbody>
