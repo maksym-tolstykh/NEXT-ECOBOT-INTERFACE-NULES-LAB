@@ -2,9 +2,32 @@
 
 import React, { useState, useEffect } from "react";
 import { toast } from "react-toastify";
-import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
+//import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import { Icon } from "leaflet";
 import "leaflet/dist/leaflet.css";
+import dynamic from "next/dynamic";
+
+const MapContainer = dynamic(
+  () => import("react-leaflet").then((ctx) => ctx.MapContainer),
+  {
+    ssr: false,
+  }
+);
+const TileLayer = dynamic(
+  () => import("react-leaflet").then((ctx) => ctx.TileLayer),
+  {
+    ssr: false,
+  }
+);
+const Marker = dynamic(
+  () => import("react-leaflet").then((ctx) => ctx.Marker),
+  {
+    ssr: false,
+  }
+);
+const Popup = dynamic(() => import("react-leaflet").then((ctx) => ctx.Popup), {
+  ssr: false,
+});
 
 const GetCoordinates = async () => {
   try {
