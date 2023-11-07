@@ -13,6 +13,7 @@ const sidebarLinks = [
   { link: "mqtt_unit", title: "Mqtt_unit" },
   { link: "optimal_value", title: "Оптимальні значення" },
   { link: "stations", title: "Станції" },
+  { link: "reports", title: "Звіти" },
 ];
 
 export default function Sidebar() {
