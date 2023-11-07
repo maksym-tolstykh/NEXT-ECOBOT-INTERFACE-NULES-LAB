@@ -1,7 +1,5 @@
 "use client";
 import React from "react";
-import { PowerBIEmbed } from "powerbi-client-react";
-import { models } from "powerbi-client";
 
 function Report11() {
   return (
