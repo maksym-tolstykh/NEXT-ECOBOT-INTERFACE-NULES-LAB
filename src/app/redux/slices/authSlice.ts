@@ -8,14 +8,20 @@ type InitialState = {
 
 type AuthState = {
   isAuth: string | null;
+  //userName: string | null;
 };
 let userCookie = null;
 if (typeof window !== "undefined") {
   userCookie = parseCookies().userData;
 }
+// let userName = null;
+// if (typeof window !== "undefined") {
+//   userName = localStorage.getItem("name");
+// }
 const initialState = {
   value: {
     isAuth: userCookie || null,
+    // userName: userName || null,
   } as AuthState,
 } as InitialState;
 
@@ -28,6 +34,7 @@ export const auth = createSlice({
       return {
         value: {
           isAuth: null,
+          // userName: null,
         },
       };
     },
@@ -39,6 +46,7 @@ export const auth = createSlice({
       return {
         value: {
           isAuth: action.payload,
+          // userName: action.payload,
         },
       };
     },

@@ -49,27 +49,20 @@ function Chart4() {
   };
   const transformDataForChart = (data: any) => {
     const chartData = {
-      labels: ["Good", "Moderate", "Poor", "Very Poor"],
+      labels: ["Excellent", "Fine", "Moderate"],
       datasets: [
         {
           label: "Air Quality",
-          data: [
-            parseFloat(data[0].good_count),
-            parseFloat(data[0].moderate_count),
-            parseFloat(data[0].poor_count),
-            parseFloat(data[0].verypoor_count),
-          ],
+          data: [+data[0].excellent, +data[0].fine, +data[0].moderate],
           backgroundColor: [
             "rgba(75, 192, 192, 0.6)",
             "rgba(255, 206, 86, 0.6)",
             "rgba(255, 99, 132, 0.6)",
-            "rgba(153, 102, 255, 0.6)",
           ],
           borderColor: [
             "rgba(75, 192, 192, 1)",
             "rgba(255, 206, 86, 1)",
             "rgba(255, 99, 132, 1)",
-            "rgba(153, 102, 255, 1)",
           ],
           borderWidth: 1,
         },
