@@ -35,7 +35,7 @@ export default function Sidebar() {
       aria-label="Global"
     >
       {sidebarLinks.map((item, index) => {
-        if (item.name?.includes(name)) {
+        if (name && item.name?.includes(name)) {
           // console.log(item.title);
           return (
             <Link
