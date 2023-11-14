@@ -4,13 +4,14 @@ import Chart3 from "./Chart3";
 import Chart4 from "./Chart4";
 
 function Charts() {
+  const date = new Date().toLocaleDateString();
   return (
     <div className="p-3 w-full">
       {/* Chart 1 */}
       <div>
         <h1 className="mb-4 text-[35px] font-extrabold leading-none tracking-tight text-gray-900 dark:text-white">
           Максимальні значеня шкідливих частинок PM2.5, PM10 в розрізі областей
-          за вказаний період часу.
+          за вказаний період часу
         </h1>
         <div className="w-[65%]">
           <Chart1 />
@@ -20,7 +21,7 @@ function Charts() {
       <div>
         <h1 className="mb-4 text-[35px] font-extrabold leading-none tracking-tight text-gray-900 dark:text-white">
           Кількість, зафіксовано середньодобових значень шкідливих твердих
-          частинок PM2.5
+          частинок PM2.5 за період з 02.08.2022 по {date}
         </h1>
         <div className="w-[61%]">
           <Chart2 />
@@ -30,7 +31,7 @@ function Charts() {
       <div>
         <h1 className="mb-4 text-[35px] font-extrabold leading-none tracking-tight text-gray-900 dark:text-white">
           Кількість вимірювань, які відносяться до категорій оптимальних значень
-          для діоксиду сірки.
+          для діоксиду сірки за період з 02.08.2022 по {date}.
         </h1>
         <div className="w-[61%]">
           <Chart3 />
@@ -40,7 +41,7 @@ function Charts() {
       <div>
         <h1 className="mb-4 text-[35px] font-extrabold leading-none tracking-tight text-gray-900 dark:text-white">
           Кількість вимірювань, які відносяться до категорій оптимальних значень
-          для чадного газу.
+          для чадного газу за період з 02.08.2022 по {date}.
         </h1>
         <div className="w-[61%]">
           <Chart4 />
