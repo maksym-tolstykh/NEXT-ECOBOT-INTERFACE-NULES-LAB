@@ -42,6 +42,8 @@ function LoginPage() {
         password: passwordRef.current.value,
       });
       if (res.status === 200) {
+        localStorage.setItem("name", usernameRef.current?.value);
+
         dispatch(logIn(res.token));
 
         toast.success("Успіх!", {

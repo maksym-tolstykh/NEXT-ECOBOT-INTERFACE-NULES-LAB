@@ -16,6 +16,7 @@ export default function Header() {
   const dispatch = useDispatch<AppDispatch>();
   const handleClearCookie = () => {
     dispatch(logOut());
+    localStorage.removeItem("name");
     router.replace("/login");
   };
 
