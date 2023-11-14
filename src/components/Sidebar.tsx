@@ -6,19 +6,31 @@ import { useEffect } from "react";
 import { useState } from "react";
 
 const sidebarLinks = [
-  { link: "category", title: "Категорії (Category)", name: ["admin"] },
-  { link: "coordinates", title: "Координати (Coordinates)", name: ["admin"] },
-  { link: "favorite", title: "Позначені (Favorite)", name: ["admin"] },
+  { link: "category", title: "Категорії (Category)", name: ["admin", "max"] },
+  {
+    link: "coordinates",
+    title: "Координати (Coordinates)",
+    name: ["admin", "max"],
+  },
+  { link: "favorite", title: "Позначені (Favorite)", name: ["admin", "max"] },
   {
     link: "measured_unit",
     title: "Одиниці вимірювання(Measured_unit)",
-    name: ["admin"],
+    name: ["admin", "max"],
   },
-  { link: "measurement", title: "Вимірювання (Measurment)", name: ["admin"] },
-  { link: "mqtt_server", title: "Mqtt_server" },
-  { link: "mqtt_unit", title: "Mqtt_unit", name: ["admin"] },
-  { link: "optimal_value", title: "Оптимальні значення", name: ["admin"] },
-  { link: "stations", title: "Станції", name: ["admin"] },
+  {
+    link: "measurement",
+    title: "Вимірювання (Measurment)",
+    name: ["admin", "max"],
+  },
+  { link: "mqtt_server", title: "Mqtt_server", name: ["admin", "max"] },
+  { link: "mqtt_unit", title: "Mqtt_unit", name: ["admin", "max"] },
+  {
+    link: "optimal_value",
+    title: "Оптимальні значення",
+    name: ["admin", "max"],
+  },
+  { link: "stations", title: "Станції", name: ["admin", "max"] },
   { link: "reports", title: "Звіти", name: ["admin", "max", "user1"] },
   { link: "charts", title: "Графіки", name: ["admin", "max", "user1"] },
 ];
