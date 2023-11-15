@@ -6,7 +6,8 @@ import { Chart as ChartJS, ArcElement } from "chart.js";
 
 ChartJS.register(ArcElement);
 function Chart2() {
-  const [data, setdata] = useState(null);
+  //@ts-ignore
+  const [data, setdata] = useState<any[]>(null);
   const [chartD, setchartD] = useState(null);
 
   const getDataChart1 = async () => {

@@ -21,7 +21,8 @@ ChartJS.register(
 );
 
 function Chart4() {
-  const [data, setdata] = useState(null);
+  //@ts-ignore
+  const [data, setdata] = useState<any[]>(null);
   const [chartD, setchartD] = useState(null);
   console.log(data);
 
