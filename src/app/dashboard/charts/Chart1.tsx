@@ -21,7 +21,8 @@ ChartJS.register(
 );
 
 function Chart1() {
-  const [data, setdata] = useState(null);
+  //@ts-ignore
+  const [data, setdata] = useState<any[]>(null);
   const [chartD, setchartD] = useState(null);
 
   const getDataChart1 = async (date: any) => {
