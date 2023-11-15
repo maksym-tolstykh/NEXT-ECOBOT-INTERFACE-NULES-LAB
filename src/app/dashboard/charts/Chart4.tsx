@@ -89,7 +89,31 @@ function Chart4() {
   return (
     <div>
       {data && chartD ? (
-        <Doughnut data={chartD} />
+        <div>
+          <Doughnut data={chartD} />
+          <table className="table-auto mt-4">
+            <thead>
+              <tr>
+                <th className="px-4 py-2">Air Quality</th>
+                <th className="px-4 py-2">Count</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td className="border px-4 py-2">Excellent</td>
+                <td className="border px-4 py-2">{+data[0]?.excellent}</td>
+              </tr>
+              <tr>
+                <td className="border px-4 py-2">Fine</td>
+                <td className="border px-4 py-2">{+data[0]?.fine}</td>
+              </tr>
+              <tr>
+                <td className="border px-4 py-2">Moderate</td>
+                <td className="border px-4 py-2">{+data[0]?.moderate}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       ) : (
         <div role="status">
           <svg

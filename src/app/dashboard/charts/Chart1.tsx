@@ -94,7 +94,33 @@ function Chart1() {
     <div>
       {/* <button onClick={getData}>показати графік</button> */}
       {data && chartD ? (
-        <Bar data={chartD} options={options} />
+        <div>
+          <Bar data={chartD} options={options} />
+          <div>
+            <table className="table-auto mt-4">
+              <thead>
+                <tr>
+                  <th className="px-4 py-2">Region</th>
+                  <th className="px-4 py-2">Max PM2.5</th>
+                  <th className="px-4 py-2">Max PM10</th>
+                </tr>
+              </thead>
+              <tbody>
+                {data?.map((item: any, index: number) => (
+                  <tr key={index}>
+                    <td className="border px-4 py-2">{item.region}</td>
+                    <td className="border px-4 py-2">
+                      {parseFloat(item.max_pm2_5)}
+                    </td>
+                    <td className="border px-4 py-2">
+                      {parseFloat(item.max_pm10)}
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
       ) : (
         <div role="status">
           <svg
